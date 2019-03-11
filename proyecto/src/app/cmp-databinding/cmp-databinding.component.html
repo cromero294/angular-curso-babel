@@ -5,3 +5,33 @@
 <input type="text" [disabled]="!modoEditar" [placeholder]="ph">
 <h2>Event binding</h2>
 <button type="button" (click)="cambiarModoEditar()">Modo editar: {{ modoEditar ? 'activado' : 'desactivado' }}</button>
+<h2>Two-Way Data Binding</h2>
+<p>Datos: {{ personaje.nombre }} {{ personaje.apellido }}</p>
+<input type="text" [(ngModel)]="personaje.nombre">
+<input type="text" [(ngModel)]="personaje.apellido">
+<h2>Variable de plantillas</h2>
+<input type="text" #nuevoNombre>
+<button type="button" (click)="cambiarNombre(nuevoNombre.value)">Cambiar nombre de personaje</button>
+<h2>Mi Two-Way Binding</h2>
+<input type="text" [value]="personaje.nombre" (input)="cambiarNombre($event.target.value)">
+<input type="text" #miInput [value]="personaje.nombre" (input)="cambiarNombre(miInput.value)">
+
+<!-- Tengo que hacer lo siguiente:
+ng g c cmp-databinding/hijo1 --skipTests
+ng g c cmp-databinding/hijo2 --skipTests
+
+comentar todo este script y poner:
+  <app-hijo1 [nombrePadre]="miNombre"></app-hijo1>
+  <app-hijo2></app-hijo2>
+
+en hijo1.component.html:
+  <h3>Hijo {{ nombre }}</h3>
+  <p>Mi padre se llama {{ nombrePadre }}</p>
+
+en hijo1.component.ts (dentro de clase):
+  nombre = 'Paquillo';
+  @Input() nombrePadre = '';
+
+Comprobar esto en cmp-databinding.component.ts (pinchar en bombilla):
+  import { Component, OnInit, Input } from '@angular/core';
+ -->

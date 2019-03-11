@@ -10,17 +10,26 @@ export class CmpDatabindingComponent implements OnInit {
   // miNombre: string | number = "Mario";
   // miNombre: string = "Mario";
   miNombre = "Mario";
-  modoEditar = false;
+  modoEditar = true;
   ph = "Placeholder";
+  personaje = {
+    nombre: 'Rickon',
+    apellido: 'Stark'
+  }
 
-  constructor() { 
+  constructor() {
     // this.miNombre = 5;
   }
 
   ngOnInit() {
   }
 
-  cambiarModoEditar(num: number): void {
+  cambiarModoEditar() {
     this.modoEditar = !this.modoEditar;
+  }
+
+  cambiarNombre(nombre: string) {
+    // console.dir(nombre);
+    this.personaje.nombre = nombre;
   }
 }
