@@ -1,0 +1,7 @@
+<h1>Data binding</h1>
+<h2>String interpolation</h2>
+<p>Me llamo {{ miNombre }}</p>
+<h2>Property binding</h2>
+<input type="text" [disabled]="!modoEditar" [placeholder]="ph">
+<h2>Event binding</h2>
+<button type="button" (click)="cambiarModoEditar()">Modo editar: {{ modoEditar ? 'activado' : 'desactivado' }}</button>

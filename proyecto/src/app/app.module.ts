@@ -4,15 +4,19 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { MiPrimerComponenteComponent } from './mi-primer-componente/mi-primer-componente.component';
 import { OtroComponenteComponent } from './otro-componente.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { CmpDatabindingComponent } from './cmp-databinding/cmp-databinding.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MiPrimerComponenteComponent,
-    OtroComponenteComponent
+    OtroComponenteComponent,
+    CmpDatabindingComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    NgbModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
