@@ -4,9 +4,13 @@
 <p [ngClass]="{tachado: true, letraAmarilla: true}">Texto tachado amarillo</p>
 <p [ngClass]="{tachado: true, letraAmarilla: false}">Texto tachado amarillo</p>
 
-<p appMarcar [color]="'blue'">Aplicando directiva "marcar" azul</p>
+<!-- <p appMarcar>Aplicando directiva "marcar" azul</p>
 <p appMarcar [color]="'orange'">Aplicando directiva "marcar" naranja</p>
-<p appMarcar [color]="'green'">Aplicando directiva "marcar" verde</p>
+<p appMarcar color="green">Aplicando directiva "marcar" verde</p> -->
+
+<p appMarcar>Aplicando directiva "marcar" azul</p>
+<p [appMarcar]="varOrange">Aplicando directiva "marcar" naranja</p>
+<p appMarcar="green">Aplicando directiva "marcar" verde</p>
 
 <h2>Estructurales</h2>
 <p *ngIf="mostrar">Se muestra si mostrar es true</p>
@@ -42,4 +46,6 @@
   <p *ngSwitchCase="'perro'">Tengo un perro</p>
   <p *ngSwitchDefault>Tengo otra mascota</p>
 </div>
+
+<p *appMiElse="mostrar">Directiva miElse que se muestra si mostrar=false</p>
   

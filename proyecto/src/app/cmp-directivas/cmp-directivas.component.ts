@@ -14,6 +14,7 @@ export class CmpDirectivasComponent implements OnInit {
     apellido: "Falco"
   }
   miMascota = 'canario';
+  varOrange = 'orange';
 
   constructor() { }
 

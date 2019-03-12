@@ -6,7 +6,7 @@ import { Directive, ElementRef, HostBinding, HostListener, Input, OnInit } from 
 export class MarcarDirective implements OnInit{
 
   @HostBinding('style.backgroundColor') colorFondo;
-  @Input() color;
+  @Input('appMarcar') color;
 
   constructor(private elemRef: ElementRef) {
     // elemRef.nativeElement.style.backgroundColor = 'blue';
@@ -15,6 +15,7 @@ export class MarcarDirective implements OnInit{
 
    ngOnInit() {
     //  this.colorFondo = 'blue';
+     this.color = this.color ? this.color : 'blue';
    }
 
    @HostListener('mouseover') onMouseOver(){
