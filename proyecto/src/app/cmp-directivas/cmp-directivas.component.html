@@ -1,3 +1,45 @@
-<p>
-  cmp-directivas works!
-</p>
+<h1>Directivas</h1>
+<h2>De atributos</h2>
+<p [ngStyle]="{color: 'blue', textDecoration: 'underline'}">Texto subrayado azul</p>
+<p [ngClass]="{tachado: true, letraAmarilla: true}">Texto tachado amarillo</p>
+<p [ngClass]="{tachado: true, letraAmarilla: false}">Texto tachado amarillo</p>
+
+<p appMarcar [color]="'blue'">Aplicando directiva "marcar" azul</p>
+<p appMarcar [color]="'orange'">Aplicando directiva "marcar" naranja</p>
+<p appMarcar [color]="'green'">Aplicando directiva "marcar" verde</p>
+
+<h2>Estructurales</h2>
+<p *ngIf="mostrar">Se muestra si mostrar es true</p>
+<p *ngIf="!mostrar">Se muestra si mostrar es false</p>
+
+<p *ngIf="mostrar; else else1">Se muestra si mostrar es true(IF)</p>
+<ng-template #else1>
+  <p>Se muestra si mostrar es false(ELSE)</p>
+</ng-template>
+
+<div *ngIf="mostrar; then if2 else else2"></div>
+<ng-template #if2>
+  <p>Se muestra si mostrar es true(IF 2)</p>
+</ng-template>
+<ng-template #else2>
+  <p>Se muestra si mostrar es false(ELSE 2)</p>
+</ng-template>
+
+<button type="button" (click)="cambiarMostrar()">Mostrando: {{ mostrar ? 'true' : 'false' }}</button>
+
+<ul>
+  <li *ngFor="let item of items; let pos = index">{{ pos }}: {{ item }}</li>
+</ul>
+
+<ul>
+  <li *ngFor="let item of persona | keyvalue"><strong>{{ item.key | titlecase }}:</strong> {{item.value}}</li>
+  <!-- orden alfabetico -->
+</ul>
+
+<h3>Switch</h3>
+<div [ngSwitch]="miMascota">
+  <p *ngSwitchCase="'gato'">Tengo un gato</p>
+  <p *ngSwitchCase="'perro'">Tengo un perro</p>
+  <p *ngSwitchDefault>Tengo otra mascota</p>
+</div>
+  

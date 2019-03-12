@@ -14,6 +14,7 @@ import { DoblePipe } from './cmp-pipes/doble.pipe';
 import { ReversePipe } from './cmp-pipes/reverse.pipe';
 import { FiltroPipe } from './cmp-pipes/filtro.pipe';
 import { CmpDirectivasComponent } from './cmp-directivas/cmp-directivas.component';
+import { MarcarDirective } from './cmp-directivas/marcar.directive';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { CmpDirectivasComponent } from './cmp-directivas/cmp-directivas.componen
     DoblePipe,
     ReversePipe,
     FiltroPipe,
-    CmpDirectivasComponent
+    CmpDirectivasComponent,
+    MarcarDirective
   ],
   imports: [
     BrowserModule,

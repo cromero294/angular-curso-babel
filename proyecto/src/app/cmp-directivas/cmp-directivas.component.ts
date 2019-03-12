@@ -7,9 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CmpDirectivasComponent implements OnInit {
 
+  mostrar = true;
+  items = ['item 1', 'item 2', 'item 3'];
+  persona = {
+    nombre: "Charly",
+    apellido: "Falco"
+  }
+  miMascota = 'canario';
+
   constructor() { }
 
   ngOnInit() {
   }
 
+  cambiarMostrar() {
+    this.mostrar = !this.mostrar;
+  }
 }
