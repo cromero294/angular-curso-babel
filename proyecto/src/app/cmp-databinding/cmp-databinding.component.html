@@ -1,4 +1,4 @@
-<h1>Data binding</h1>
+<!-- <h1>Data binding</h1>
 <h2>String interpolation</h2>
 <p>Me llamo {{ miNombre }}</p>
 <h2>Property binding</h2>
@@ -14,7 +14,10 @@
 <button type="button" (click)="cambiarNombre(nuevoNombre.value)">Cambiar nombre de personaje</button>
 <h2>Mi Two-Way Binding</h2>
 <input type="text" [value]="personaje.nombre" (input)="cambiarNombre($event.target.value)">
-<input type="text" #miInput [value]="personaje.nombre" (input)="cambiarNombre(miInput.value)">
+<input type="text" #miInput [value]="personaje.nombre" (input)="cambiarNombre(miInput.value)"> -->
+
+<app-hijo1 [nombrePadre]="miNombre" (nombreCambiado)="nombreHijo1=$event"></app-hijo1>
+<app-hijo2 [nombrePadre]="miNombre" [nombreHermano]="nombreHijo1"></app-hijo2>
 
 <!-- Tengo que hacer lo siguiente:
 ng g c cmp-databinding/hijo1 --skipTests

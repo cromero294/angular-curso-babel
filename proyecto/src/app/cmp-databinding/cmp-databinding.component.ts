@@ -12,6 +12,8 @@ export class CmpDatabindingComponent implements OnInit {
   miNombre = "Mario";
   modoEditar = true;
   ph = "Placeholder";
+  nombreHijo1 = 'Paquillo';
+
   personaje = {
     nombre: 'Rickon',
     apellido: 'Stark'
