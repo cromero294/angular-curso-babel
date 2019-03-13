@@ -1,0 +1,13 @@
+div#titulo {
+    display:flex;
+    justify-content: center;
+}
+
+div#contenido {
+    font-size: 24px;
+}
+
+li {
+    list-style: none;
+    border-bottom: 2px solid lightgrey;
+}

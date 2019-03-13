@@ -1,0 +1,20 @@
+div#arriba {
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+}
+
+div#abajo {
+    display: flex;
+    justify-content: space-between;
+}
+
+app-form {
+    height: 500px;
+    width: 50%;
+}
+
+app-cv {
+    height: 500px;
+    width: 50%;
+}

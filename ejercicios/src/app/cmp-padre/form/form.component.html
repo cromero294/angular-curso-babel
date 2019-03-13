@@ -1,0 +1,33 @@
+<div>
+  <div>
+    <label for="nombre">Nombre</label>
+    <input type="text" name="nombre" (change)="cambiarNombre($event.target.value)">
+  </div>
+
+  <div>
+    <label for="apellidos">Apellidos</label>
+    <input type="text" name="apellidos" (change)="cambiarApellidos($event.target.value)">
+  </div>
+
+  <div>
+    <label for="fecha">Fecha</label>
+    <input type="text" name="fecha" placeholder="dd/MM/yyyy" (change)="cambiarFecha($event.target.value)">
+  </div>
+
+  <div>
+    <label for="email">email</label>
+    <input type="text" name="email" (change)="cambiarEmail($event.target.value)">
+  </div>
+
+  <div>
+    <label for="foto">Foto</label>
+    <input type="file" name="foto">
+  </div>
+
+  <div>
+    <label for="skills">Aptitudes</label>
+    <input type="text" name="skills" #skills>
+    <button (click)="addSkill(skills.value)">+</button>
+    <button id="remove" (click)="removeSkill()">-</button>
+  </div>
+</div>

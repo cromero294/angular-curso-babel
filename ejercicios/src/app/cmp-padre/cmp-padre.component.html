@@ -1,0 +1,7 @@
+<div id="arriba">
+  <h1>CV Dinámico</h1>
+</div>
+<div id="abajo">
+  <app-form (nombreCambiado)="nombre=$event" (apellidosCambiados)="apellidos=$event" (emailCambiado)="email=$event" (fechaCambiada)="fecha=$event" (skillsCambiadas)="skills=$event"></app-form>
+  <app-cv [nombre]="nombre" [apellidos]="apellidos" [email]="email" [fecha]="fecha" [skills]="skills"></app-cv>
+</div>

@@ -1,0 +1,14 @@
+<div>
+    <div id="titulo">
+        <h1>CV - {{ nombre }} {{ apellidos }}</h1>
+    </div>
+
+    <div id="contenido">
+        <p><strong>Fecha de nacimiento:</strong> {{ fecha | date:"dd - MMMM - yyyy" }}</p>
+        <p><strong>Email personal:</strong> {{ email }}</p>
+        <p><strong>Aptitudes:</strong></p>
+        <ul>
+            <li *ngFor="let skill of skills">{{ skill }}</li>
+        </ul>
+    </div>
+</div>    
