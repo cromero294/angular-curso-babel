@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
@@ -21,6 +21,9 @@ import { CmpAComponent } from './cmp-servicios/cmp-a/cmp-a.component';
 import { CmpBComponent } from './cmp-servicios/cmp-b/cmp-b.component';
 import { CmpEjercicioToDoComponent } from './cmp-ejercicio-to-do/cmp-ejercicio-to-do.component';
 import { TacharDirective } from './cmp-ejercicio-to-do/tachar.directive';
+import { CmpFormulariosComponent } from './cmp-formularios/cmp-formularios.component';
+import { FormPlantillaComponent } from './cmp-formularios/form-plantilla/form-plantilla.component';
+import { FormReactivoComponent } from './cmp-formularios/form-reactivo/form-reactivo.component';
 
 @NgModule({
   declarations: [
@@ -41,12 +44,16 @@ import { TacharDirective } from './cmp-ejercicio-to-do/tachar.directive';
     CmpAComponent,
     CmpBComponent,
     CmpEjercicioToDoComponent,
-    TacharDirective
+    TacharDirective,
+    CmpFormulariosComponent,
+    FormPlantillaComponent,
+    FormReactivoComponent
   ],
   imports: [
     BrowserModule,
     NgbModule.forRoot(),
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

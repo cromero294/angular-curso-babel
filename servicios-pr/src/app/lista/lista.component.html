@@ -1,0 +1,7 @@
+<div>
+  <div *ngFor="let tarea of listaTareas" [ngClass]="{completa: tarea.completa}">
+    <p>{{ tarea.nombre }}: {{ tarea.completa ? 'Hecha' : 'No hecha' }}</p>
+    <button type="button" (click)="eliminar(tarea)">Eliminar</button>
+    <button type="button" (click)="completar(tarea)">{{ tarea.completa ? 'Deshacer' : 'Hacer' }}</button>
+  </div>
+</div>

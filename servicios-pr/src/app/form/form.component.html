@@ -1,0 +1,5 @@
+<div>
+  <label for="tarea">Tarea</label>
+  <input type="text" id="tarea" #nuevaTarea (keyup.enter)="guardar(nuevaTarea)">
+</div>
+<button type="button" (click)="guardar(nuevaTarea)">Añadir</button>
