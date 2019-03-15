@@ -1,12 +1,12 @@
 <div>
   <div>
     <label for="nombre">Nombre</label>
-    <input type="text" name="nombre" (change)="cambiarNombre($event.target.value)">
+    <input type="text" name="nombre" (keyup)="cambiarNombre($event.target.value)">
   </div>
 
   <div>
     <label for="apellidos">Apellidos</label>
-    <input type="text" name="apellidos" (change)="cambiarApellidos($event.target.value)">
+    <input type="text" name="apellidos" (keyup)="cambiarApellidos($event.target.value)">
   </div>
 
   <div>
@@ -15,7 +15,7 @@
   </div>
 
   <div>
-    <label for="email">email</label>
+    <label for="email">Email</label>
     <input type="text" name="email" (change)="cambiarEmail($event.target.value)">
   </div>
 

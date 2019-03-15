@@ -1,0 +1,6 @@
+<input type="text" #nombreTarea>
+<button type="button" (click)="addTarea(nombreTarea.value)">Add tarea</button>
+<button type="button" (click)="removeTarea(nombreTarea.value)">Remove tarea</button>
+<ul>
+  <li *ngFor="let tarea of tareas; let pos = index" [ngClass]="{tachado: tachado[pos]}">{{ tarea }} <button type="button" (click)="tacharTarea(tarea)">Marcar</button></li>
+</ul>

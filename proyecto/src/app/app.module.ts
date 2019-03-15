@@ -16,6 +16,11 @@ import { FiltroPipe } from './cmp-pipes/filtro.pipe';
 import { CmpDirectivasComponent } from './cmp-directivas/cmp-directivas.component';
 import { MarcarDirective } from './cmp-directivas/marcar.directive';
 import { MiElseDirective } from './cmp-directivas/mi-else.directive';
+import { CmpServiciosComponent } from './cmp-servicios/cmp-servicios.component';
+import { CmpAComponent } from './cmp-servicios/cmp-a/cmp-a.component';
+import { CmpBComponent } from './cmp-servicios/cmp-b/cmp-b.component';
+import { CmpEjercicioToDoComponent } from './cmp-ejercicio-to-do/cmp-ejercicio-to-do.component';
+import { TacharDirective } from './cmp-ejercicio-to-do/tachar.directive';
 
 @NgModule({
   declarations: [
@@ -31,7 +36,12 @@ import { MiElseDirective } from './cmp-directivas/mi-else.directive';
     FiltroPipe,
     CmpDirectivasComponent,
     MarcarDirective,
-    MiElseDirective
+    MiElseDirective,
+    CmpServiciosComponent,
+    CmpAComponent,
+    CmpBComponent,
+    CmpEjercicioToDoComponent,
+    TacharDirective
   ],
   imports: [
     BrowserModule,
