@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, Validators, FormArray } from '@angular/forms';
+import { FormGroup, FormControl, Validators, FormArray, FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-form-reactivo',
@@ -10,16 +10,16 @@ export class FormReactivoComponent implements OnInit {
   miForm: FormGroup;
   nombresStark = ['tony', 'arya', 'rickon', 'bran', 'sansa', 'robb'];
 
-  constructor() { }
+  constructor(private formBuilder: FormBuilder) { }
 
   ngOnInit() {
-    this.miForm = new FormGroup({
-      usuario: new FormControl('Mario', [Validators.required, this.esStark(this.nombresStark)]),
-      password: new FormControl('', [Validators.required, Validators.minLength(5)]),
-      email: new FormControl('', Validators.required),
-      skills: new FormArray([
-        new FormControl('React', Validators.required),
-        new FormControl('Angular', Validators.required)
+    this.miForm = this.formBuilder.group({
+      usuario: this.formBuilder.control('Mario', [Validators.required, this.esStark(this.nombresStark)]),
+      password: this.formBuilder.control('', [Validators.required, Validators.minLength(5)]),
+      email: this.formBuilder.control('', Validators.required),
+      skills: this.formBuilder.array([
+        this.formBuilder.control('React', Validators.required),
+        this.formBuilder.control('Angular', Validators.required)
       ])
     });
   }
@@ -29,7 +29,7 @@ export class FormReactivoComponent implements OnInit {
   }
 
   addSkill(skill: string): void {
-    (<FormArray>this.miForm.controls.skills).push(new FormControl(skill, Validators.required));
+    (<FormArray>this.miForm.controls.skills).push(this.formBuilder.control(skill, Validators.required));
   }
 
   esStark(nombres: Array<string>) {

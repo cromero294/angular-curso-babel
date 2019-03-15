@@ -1,5 +1,5 @@
-<div>
+<form [formGroup]="miForm">
   <label for="tarea">Tarea</label>
-  <input type="text" id="tarea" #nuevaTarea (keyup.enter)="guardar(nuevaTarea)">
-</div>
-<button type="button" (click)="guardar(nuevaTarea)">Añadir</button>
+  <input type="text" id="tarea" (keyup.enter)="guardar()" formControlName="tarea">
+  <button type="button" (click)="guardar()">Añadir</button>
+</form>
