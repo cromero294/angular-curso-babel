@@ -24,6 +24,13 @@ import { TacharDirective } from './cmp-ejercicio-to-do/tachar.directive';
 import { CmpFormulariosComponent } from './cmp-formularios/cmp-formularios.component';
 import { FormPlantillaComponent } from './cmp-formularios/form-plantilla/form-plantilla.component';
 import { FormReactivoComponent } from './cmp-formularios/form-reactivo/form-reactivo.component';
+import { CmpRoutingComponent } from './cmp-routing/cmp-routing.component';
+import { InicioComponent } from './cmp-routing/inicio/inicio.component';
+import { NuevoUsuarioComponent } from './cmp-routing/nuevo-usuario/nuevo-usuario.component';
+import { ROUTING } from './cmp-routing/app.routes';
+import { UsuarioComponent } from './cmp-routing/usuario/usuario.component';
+import { EditarComponent } from './cmp-routing/inicio/editar/editar.component';
+import { InfoComponent } from './cmp-routing/inicio/info/info.component';
 
 @NgModule({
   declarations: [
@@ -47,13 +54,20 @@ import { FormReactivoComponent } from './cmp-formularios/form-reactivo/form-reac
     TacharDirective,
     CmpFormulariosComponent,
     FormPlantillaComponent,
-    FormReactivoComponent
+    FormReactivoComponent,
+    CmpRoutingComponent,
+    InicioComponent,
+    NuevoUsuarioComponent,
+    UsuarioComponent,
+    EditarComponent,
+    InfoComponent
   ],
   imports: [
     BrowserModule,
     NgbModule.forRoot(),
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ROUTING
   ],
   providers: [],
   bootstrap: [AppComponent]

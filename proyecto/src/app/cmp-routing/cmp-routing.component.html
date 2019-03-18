@@ -1,0 +1,13 @@
+<h1>Routing</h1>
+<hr>
+<a [routerLink]="['/']">Inicio</a>
+<a [routerLink]="['/usuario/1']">Usuario 1</a>
+<a [routerLink]="['/usuario/2']">Usuario 2</a>
+<a [routerLink]="['/nuevo-usuario']">Nuevo usuario</a>
+<hr>
+<p>Contador: {{ contadorService.cont }}</p>
+<button type="button" (click)="contadorService.cont = contadorService.cont + 1">+</button>
+<router-outlet></router-outlet>
+
+<!-- localhost:4200/usuario/3/info -->
+<!-- ['/usuario', 3, 'info'] -->
