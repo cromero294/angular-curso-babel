@@ -14,7 +14,7 @@ export class ListaComponent implements OnInit {
 
   ngOnInit() {
     this.listaTareas = this.tareasService.getListaTareas();
-    this.tareasService.listaCambiada.subscribe((nuevaLista) => {
+    this.tareasService.listaCambiada.subscribe(nuevaLista => {
       this.listaTareas = nuevaLista;
     })
   }

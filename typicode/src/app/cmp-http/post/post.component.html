@@ -1,0 +1,5 @@
+<div>{{ post.id }}: {{ post.title }}</div>
+<button (click)="mostrarComentarios()">Mostrar comentarios</button>
+<div *ngFor="let comment of comentarios" [ngClass]="{esconder: enableComments}">
+  <p>{{ comment }}</p>
+</div>
