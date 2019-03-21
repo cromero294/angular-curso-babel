@@ -6,5 +6,5 @@ import { EditarGuard } from './editar/editar.guard';
 
 export const USUARIOS_ROUTES: Routes = [
     { path: ':id/info', component: InfoComponent, canActivate: [InfoGuard] },
-    { path: ':id/editar', component: EditarComponent, canDeactivate: [EditarGuard]}
+    { path: ':id/editar', component: EditarComponent, canDeactivate: [EditarGuard] }
 ];

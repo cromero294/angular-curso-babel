@@ -1,5 +1,4 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { ListServiceService } from 'src/app/servicios/list-service.service';
 import { Post } from 'src/app/clases/post';
 import { ComentariosService } from 'src/app/servicios/comentarios.service';
 
@@ -9,21 +8,32 @@ import { ComentariosService } from 'src/app/servicios/comentarios.service';
   styleUrls: ['./post.component.css']
 })
 export class PostComponent implements OnInit {
-  @Input() post: Post;
+  @Input() post;
+  usuario;
+  mostrar: boolean;
   comentarios;
-  enableComments: boolean = true;
 
-  constructor(private commentService: ComentariosService) { }
+  constructor(private commentService: ComentariosService) {
+
+  }
 
   ngOnInit() {
-    let observable = this.commentService.getComentarios(this.post.id);
+    let observable = this.commentService.updateComentarios(this.post.id);
     observable.subscribe(
       nuevaLista => this.comentarios = nuevaLista,
+      err => console.log(err)
+    );
+
+    let obUsers = this.commentService.getUser(this.post.userId);
+    obUsers.subscribe(
+      user => {
+        this.usuario = user;
+      },
       err => console.log(err)
     );
   }
 
   mostrarComentarios() {
-    this.enableComments = !this.enableComments;
+    this.mostrar = !this.mostrar;
   }
 }

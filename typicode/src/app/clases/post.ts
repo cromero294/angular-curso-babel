@@ -1,12 +1,12 @@
 export class Post {
 
-    constructor(private _id: number, private _userid: number, private _title: string, private _body: string) {  }
+    constructor(private _id: number, private _userid: string, private _title: string, private _body: string) {  }
 
     get id(): number {
         return this._id;
     }
 
-    get userid(): number {
+    get userid(): string {
         return this._userid;
     }
 

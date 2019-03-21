@@ -1,5 +1,12 @@
-<div>{{ post.id }}: {{ post.title }}</div>
-<button (click)="mostrarComentarios()">Mostrar comentarios</button>
-<div *ngFor="let comment of comentarios" [ngClass]="{esconder: enableComments}">
-  <p>{{ comment }}</p>
+<div><strong>{{ usuario[0].username }}</strong>: {{ post.title }}</div>
+<hr>
+<button (click)="mostrarComentarios()" class="btn btn-success">Mostrar comentarios</button>
+<hr>
+<div *ngIf="mostrar">
+    <div *ngFor="let comment of comentarios">
+        <p><strong>{{ comment.email }}</strong>: {{ comment.body }}</p>
+    </div>
 </div>
+<!-- <app-comentarios *ngIf="mostrar"></app-comentarios> -->
+<hr>
+<!-- <router-outlet></router-outlet> -->

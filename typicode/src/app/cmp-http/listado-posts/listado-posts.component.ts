@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ListServiceService } from 'src/app/servicios/list-service.service';
+import { Post } from 'src/app/clases/post';
 
 @Component({
   selector: 'app-listado-posts',
@@ -7,7 +8,7 @@ import { ListServiceService } from 'src/app/servicios/list-service.service';
   styleUrls: ['./listado-posts.component.css']
 })
 export class ListadoPostsComponent implements OnInit {
-  posts = [];
+  posts: Array<Post> = [];
 
   constructor(private listService: ListServiceService) { }
 
