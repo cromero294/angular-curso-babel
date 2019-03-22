@@ -3,5 +3,7 @@
     <p>{{ tarea.nombre }}: {{ tarea.completa ? 'Hecha' : 'No hecha' }}</p>
     <button type="button" (click)="eliminar(tarea)">Eliminar</button>
     <button type="button" (click)="completar(tarea)">{{ tarea.completa ? 'Deshacer' : 'Hacer' }}</button>
+    <!-- <button type="button" [routerLink]="[tarea.id, 'info']">Detalles</button> -->
   </div>
 </div>
+<router-outlet></router-outlet>
