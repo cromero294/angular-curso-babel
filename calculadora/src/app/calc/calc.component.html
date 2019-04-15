@@ -1,0 +1,16 @@
+<form #miForm="ngForm">
+  <div>
+    <label for="op1">Primer operando:</label>
+    <input type="text" name="op1" id="op1" [ngModel]="op1" #inputOp1="ngModel" required>
+    <p *ngIf="inputOp1.invalid && inputOp1.dirty">El campo no es válido</p>
+  </div>
+  <div>
+    <label for="op2">Segundo operando:</label>
+    <input type="text" name="op2" id="op2" [ngModel]="op2" #inputOp2="ngModel" required>
+    <p *ngIf="inputOp2.invalid && inputOp2.dirty">El campo no es válido</p>
+  </div>
+  <input type="button" [disabled]="miForm.invalid" (click)='enviarDatos("suma")' value="Sumar">
+  <input type="button" [disabled]="miForm.invalid" (click)='enviarDatos("resta")'value="Restar">
+  <input type="button" [disabled]="miForm.invalid" (click)='enviarDatos("multiplicacion")' value="Mutiplicar">
+  <input type="button" [disabled]="miForm.invalid" (click)='enviarDatos("division")' value="Dividir">
+</form>

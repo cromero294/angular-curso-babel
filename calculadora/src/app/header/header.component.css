@@ -1,0 +1,14 @@
+header {
+    display:flexbox;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-around;
+    color: darkmagenta;
+    font-family: Arial, Helvetica, sans-serif;
+    position: sticky;
+}
+
+header > * {
+    width: 100%;
+    text-align: center;
+}
