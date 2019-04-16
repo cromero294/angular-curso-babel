@@ -17,13 +17,9 @@ export class CalcComponent implements OnInit {
   }
 
   enviarDatos(operacion: string) {
-    console.log(this.op1)
-    console.log(this.op2)
     let observable = this.calcService.calcular(this.op1, this.op2, operacion);
     observable.subscribe(
-      operacionHTTP => console.log(operacionHTTP)
-      // operacionHTTP => this.resultado = operacionHTTP.resultado
+      operacionHTTP => this.resultado = operacionHTTP.resultado
     );
   }
-
 }
