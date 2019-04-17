@@ -23,4 +23,13 @@
     background-color: #f44336;
     color: white;
 }
+
+.panel{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height:10px ;
+}
   

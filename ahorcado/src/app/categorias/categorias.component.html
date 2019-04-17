@@ -1,3 +1,6 @@
-<div *ngFor="let categoria of categorias">
-  <a [routerLink]="['/juego', categoria]" (click)="cambiarCategoria(categoria)"><button class="btn button">{{ categoria }}</button></a>
+
+<div id="panel">
+  <div  *ngFor="let categoria of categorias">
+    <a [routerLink]="['/juego', categoria]" (click)="cambiarCategoria(categoria)"><button class="btn button">{{ categoria }}</button></a>
+  </div>
 </div>

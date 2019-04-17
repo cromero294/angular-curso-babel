@@ -19,4 +19,7 @@ export class AhorcadoService {
     return this.httpClient.get("http://172.10.4.186:8080/buscar/"+categoria);
   }
   
+  public getIntentos(partida:Object):Observable<any>{
+    return this.httpClient.post("http://172.10.4.186:8080/juego/intento", partida);
+  }
 }
